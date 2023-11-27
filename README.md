@@ -1,7 +1,7 @@
-- 👋 Hi Fellas, I’m @Prat13k
-- 👀 I’m interested in Data Science and Machine Learning
-- 🌱 I’m currently learning Data Science
-- 💞️ I’m looking to collaborate on anything related to my fields of interest or anything you need help with.i will be willing to help or contibute in anyway i can.
+- 👋 Hi Fellas, I’m Pratik Patil, here known as @prat13k
+- 👀 I’m post graduate in Data Science and Machine Learning
+- 🌱 I’m am freelancing Data Sciencis
+- 💞️ I’m pen to collaborate on anything related to my fields of interest or anything you need help with. I will be eagerly willing to help or contibute in anyway i can.
 - 📫 you can reach me through my Linkedin or email or twitter mentioned here or you can message me here anytime.
 Thankyou :)
 
