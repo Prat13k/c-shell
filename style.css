@@ -1,0 +1,19 @@
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .hero {
+    background: linear-gradient(45deg, #1a202c, #2d3748);
+  }
+  
+  .skill-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skill-card ul li {
+    margin: 0.5em 0;
+    font-size: 1.1rem;
+  }
+  
