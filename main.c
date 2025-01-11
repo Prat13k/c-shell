@@ -84,7 +84,7 @@ int shl_launch(char **args)
 	{
 		do
 		{
-			//waitpid(pid, &status, WUNTRACED);
+			waitpid(pid, &status, WUNTRACED);
 		}
 		while(!WIFEXITED(status) && !WIFSIGNALED(STATUS));
 	}
@@ -129,9 +129,8 @@ char *shl_read_line(void)
 			}
 		}
 		return line;
-
 	#else
-	#define SHL_RL_BUFSIZE 1024
+		#define SHL_RL_BUFSIZE 1024
 		int bufsize = SHL_RL_BUFSIZE;
 		int position = 0;
 		char *buffer = malloc(sizeof(char) * bufsize);
@@ -179,25 +178,25 @@ char *shl_read_line(void)
 	//read a line of input
 	char *shl_read_line(void)
 	{
-		#ifdef SHL_USE_STD_GETLINE
+	    #ifdef SHL_USE_STD_GETLINE
             char *line = NULL;
-			ssize_t, bufsize = 0;
-			if(getline(&line, &bufsize, stdin) == -1)
+		ssize_t, bufsize = 0;
+		if(getline(&line, &bufsize, stdin) == -1)
+		{
+			if(feof(stdin))
 			{
-				if(feof(stdin))
-				{
-					exit(EXIT_SUCCESS);
+				exit(EXIT_SUCCESS);
 
-				}
-				else:
-				{
-					perror("shl: getline \n");
-					exit(EXIT_FAILURE);
-				}
 			}
-			return line;
+			else:
+			{
+				perror("shl: getline \n");
+				exit(EXIT_FAILURE);
+			}
+		}
+		return line;
         #else;
-        #define SHL_RL_BUFSIZE 1024;
+            #define SHL_RL_BUFSIZE 1024;
             int bufsize = SHL_RL_BUFSIZE;
             int position = 0;
             char *buffer == malloc(sizeof(char) *bufsize);
@@ -241,7 +240,6 @@ char *shl_read_line(void)
                 }
             }
         }
-	}
 	#endif
 }
 
@@ -286,7 +284,6 @@ void shl_loop(void)
 	char *line;
 	char **args;
 	int status;
-
 	do
 	{
 		printf(">");
