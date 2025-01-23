@@ -1,3 +1,3 @@
 #c-shell
 
-a simple shell using rust
+a simple command shell using rust
